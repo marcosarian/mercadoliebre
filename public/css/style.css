@@ -10,30 +10,45 @@ body{
     background-color: #ebebeb;
 }
 
-h3{
-    font-size: 24px;               
-}
-
-p{
-    font-size: 12px;
-}
-div.top-header{
-    padding: 5%;
-}
-
 header{
     background-color: #EAC926;
 }
 
-header div.logo{
-    width: 50%;
+.inicioheader{
+    padding: 5%;
 }
 
-header div.logo{
-    padding: 10px;
+.inicioheader p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
 }
-header nav{
-    font-size: 12px;
+
+div.buscarbarra{
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header .buscarbarra .buscar{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+header .buscarbarra .iconobuscar{
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 10%;
+}
+
+.logoheader{
+    width: 50%;
+    padding: 10px;
 }
 
 header ul li{
@@ -45,31 +60,12 @@ header ul li a{
     color: #000;
 }
 
-header .form .input{
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
-}
-header .form .submit{
-    background-color: #FFF;
-    border: 1px solid #000;
-    color: #666;
-    width: 10%;
-}
-
-header div.top-header p{
-    width: 100%;
+.botonmenu{
     text-align: center;
-    margin-top: 10px;
+   
 }
 
-div.burger-menu{
-    text-align: center;
-}
-
-div.burger-menu i{
+.botonmenu i{
     background-color: #0044AA;
     border-radius: 5px;
     color: #FFF;
@@ -80,50 +76,44 @@ div.burger-menu i{
     width: 40px;
 }
 
-.price{
-    font-size: 18px;
-}
-
-.discount,
-.description{
-    font-size: 16px;
-    font-weight: normal;
-}
-
-h3,
-.description{
-    color: #666;
-}
-
-.description{
-    display: none;
-    margin-top: 20px;
-}
-
-section.banner img{
+.banner img{
     width: 100%;
 }
 
-main{
-    width: 90%;
-    margin: 0 auto;
+.productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-main section article{
-    background-color: #fff;    
-    margin: 10px 0px;
+.productovender{
+    margin: 15px;
+    border-top: 1px solid #ebebeb;
 }
 
 main section article img{
     width: 100%;
 }
 
+main{
+    width: 90%;
+    margin: auto;
+}
+
+main article{
+    margin-bottom: 10px;
+}
+
+main section article{
+    background-color: #fff;
+}
 main section article i,
-.discount{
+.rebaja{
     color: #39b54a;
 }
 
 main section article i{
+    display: block;
     font-size: 16px;
     padding: 5px;
     width: 30px;
@@ -131,31 +121,139 @@ main section article i{
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
+    right: 20px;
+    top: -15px;
 }
 
-main section h3{
-    margin: 20px 0px;
-}
-
-article div.main-article{
-    width: 100%;
-    border-top: 1px solid #ebebeb;
-    padding: 15px;
+.precio{
+    display: flex;
+    flex-direction: row;
 }
 
 
+h3,
+.descripcion {
+    color: #666;
+    display: none;
+}
 
-@media (min-width: 361px){
-    main section article .description{
+.valor{
+    font-size: 18px;
+    width: 30%;
+}
+
+.rebaja{
+    width: 70%;
+}
+
+.rebaja,
+.descripcion{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/*inicia el footer*/
+
+footer{
+    text-align: center;
+    background-color: white;
+}
+
+.texto-footer-titulo{
+    font-weight: bold;
+    margin: 1%;
+}
+
+.texto-footer{
+    margin: 1%;
+}
+
+.icono-footer{
+    margin-bottom: 10px;
+    font-size: 32px;
+    color: #03264C;
+}
+
+/*****************CELLPHONE***********************/
+@media (min-width:361px){
+    .descripcion {
         display: block;
     }
-
     main section article{
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        width: 100%;
+    }
+
+}
+
+/*****************TABLET**********************/
+
+@media (min-width:769px){
+    main section article{
+        width: 48%;
+        margin: 1%;
+    }
+    header div .logoheader{
+        width: 30%;
+    }
+    header div .buscarbarra{
+        width: 30%;
+    }
+    header div .inicioheader p{
+        width: 30%;
+    }
+
+    .inicioheader{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+       
+}
+
+/*****************DESKTOP**********************/
+
+@media (min-width:1200px){
+    main section article{
+        width: 23%;
+        margin: 1%;
     }
 }
 
 
-@media (min-width: 769px){
+/*****************FORMULARIOS**********************/
 
+.datospersonales{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-left: 5%;
 }
+
+.tituloperfil{
+    margin-top: 10px;
+    margin-left: 10%;
+}
+.perfil{
+    margin-left: 8%;
+}
+
+.interesestitulo{
+    margin-top: 10px;
+    margin-left: 9%;
+}
+.intereses{
+    display: flex;
+    flex-direction: column;
+    margin-left: 11%;
+    width: 20%;
+}
+.botonenviar{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-left: 5%;
+    text-align: center;
+}
+
